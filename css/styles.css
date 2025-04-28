@@ -481,13 +481,12 @@ body {
   flex-direction: column;
 }
 
-.footer-subscription-label-text {
+.footer-subscription-header {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  ;
   margin-bottom: 16px;
 }
 
@@ -605,7 +604,7 @@ body {
   transform: translate(-50%, -50%);
 
   width: 408px;
-  min-height: 574px;
+  min-height: 584px;
   border-radius: 4px;
 
   background-color: #fcfcfc;
@@ -626,7 +625,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  position: fixed;
+  position: absolute;
   top: 24px;
   right: 24px;
   width: 24px;
@@ -634,6 +633,8 @@ body {
   background-color: #e7e9fc;
   border: solid 1px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
 
   transition-property: background-color, border;
   transition-duration: 250ms, 250ms;
@@ -651,7 +652,7 @@ body {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: #404bbf;
-  border: solid 1px #404bbf;
+  border: none;
 }
 
 .modal-close-btn:hover .modal-close-btn-icon,
