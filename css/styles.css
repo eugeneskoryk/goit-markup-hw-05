@@ -791,6 +791,11 @@ body {
 }
 
 .custom-checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -799,11 +804,6 @@ body {
   transition-property: background-color, border, fill;
   transition-duration: 250ms, 250ms, 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
 }
 
 .custom-checkmark-icon {
