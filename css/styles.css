@@ -533,7 +533,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   border: 0;
   border-radius: 4px;
   padding: 8px 24px;
@@ -662,13 +661,6 @@ body {
   fill: #fff;
 }
 
-.modal-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .modal-form-header {
   text-align: center;
   margin-bottom: 16px;
@@ -695,6 +687,18 @@ body {
   margin-bottom: 4px;
 }
 
+.input-with-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  border: 0;
+  outline: none;
+  width: 360px;
+  height: 40px;
+}
+
 .modal-form-input {
   position: absolute;
   left: 0;
@@ -712,27 +716,6 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-with-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 38px;
-  position: relative;
-
-  border: 0;
-  outline: none;
-  width: 360px;
-  height: 40px;
-}
-
-.input-with-icon input:focus {
-  border-color: #4d5ae5;
-}
-
-.modal-form-input:focus~svg {
-  fill: #4d5ae5;
-}
-
 .modal-form-input-icon {
   position: absolute;
   left: 16px;
@@ -743,6 +726,14 @@ body {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-with-icon input:focus {
+  border-color: #4d5ae5;
+}
+
+.modal-form-input:focus~svg {
+  fill: #4d5ae5;
 }
 
 .form-comment {
@@ -790,46 +781,37 @@ body {
   margin-bottom: 24px;
 }
 
+.modal-form-agreement-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
 .custom-checkmark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  fill: transparent;
+  background-color: transparent;
 
   width: 16px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
 
-  transition-property: background-color, border, fill;
-  transition-duration: 250ms, 250ms, 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, border;
+  transition-duration: 250ms, 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .custom-checkmark-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   fill: #fcfcfc;
 }
-
 
 .modal-form-agreement-checkbox:checked~.modal-form-agreement-label> :nth-child(1) {
   background-color: #404bbf;
   border: none;
-  fill: #f4f4fd;
-}
-
-.modal-form-agreement-label {
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
 }
 
 .privacy-policy-link {
@@ -841,6 +823,7 @@ body {
 }
 
 .user-data-submit-btn {
+  display: block;
   color: #ffffff;
   background-color: #4d5ae5;
   font-weight: 500;
